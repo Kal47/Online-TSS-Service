@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Registration Form</title>
+	<style>
+		body	{background-color: gray;}
+		h1	{color: orange; text-align: center;}
+		h2, label	{color: aqua; text-align: center;}	
+		form, input	{text-align: center;}
+		#footnote {color: aqua; font-style: italic;}
+		
+	</style>
+</head>
+
+<body>
+	<h1>DecTalk Text To Speach</h1>
+	<h2>The classic Steven Hawking, Moonbase Alpha, and the old NOAA Weather Radio anouncer</h2>
+	<!-- <form id="phrase" method="post"	action="{% url 'dectalk' %}"> -->
+	<form id="phrase" method="post"	action="{% url 'dectalk' %}">
+		<input type="hidden" name="secretcode" id="secretcode" value="42">
+		<label for="phrase">Phrase:</label>
+		<textarea id="phrase" required name="phrase" rows="6" cols="50">[:PHONE ON] [:nk] [:dv gn 75][HXAE&lt;300,25&gt; PIY&lt;300&gt; BRR&lt;500,27&gt; TH&lt;100&gt; DEY&lt;600,25&gt; TUW&lt;600,30&gt; YU&lt;600,29&gt; _&lt;300&gt; HXAE&lt;300,25&gt; PIY&lt;300&gt; BRR&lt;500,27&gt; TH&lt;100&gt; DEY&lt;600,25&gt; TUW&lt;600,32&gt; YU&lt;600,30&gt; _&lt;300&gt; HXAE&lt;300,25&gt; PIY&lt;300&gt; BRR&lt;500,37&gt; TH&lt;100&gt; DEY&lt;600,34&gt; HXAE&lt;300,30&gt; PIY&lt;300&gt; BRR&lt;500,29&gt; TH&lt;100&gt; DEY&lt;600,27&gt; _&lt;300&gt; HXAE&lt;300,35&gt; PIY&lt;300&gt; BRR&lt;500,34&gt; TH&lt;100&gt; DEY&lt;600,30&gt; TUW&lt;600,32&gt; YU&lt;1200,30&gt; ]. 
+		</textarea>
+		<input type="submit" name="submitbutton" id="submitbutton" value="Submit">
+	</form>	
+			<p id="footnote">Note: You will be redirected to a new page with 
+		your phrase read to you. This link will only be avalable for 
+		<p id="deletetime"/></p> minutes.</p>
+		<!-- the deletetime id gets the time a file preseits on the 
+		server dynamicly and enters it into this paragraph, I still need
+		 to figure out how to do that -->
+</body>
+</html>
